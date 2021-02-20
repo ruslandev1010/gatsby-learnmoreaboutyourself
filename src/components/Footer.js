@@ -14,18 +14,16 @@ const FooterWrapper = styled.footer`
   margin: 0 auto;
 
   & nav {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
+    display: block;
+
     max-width: 900px;
     margin: 0 auto;
 
     .footer-col {
-      flex: 1 auto;
-      display: inline-flex;
-      flex-direction: column;
+    
       padding-right: 1em;
     }
+    
   }
 
   & a {
@@ -36,6 +34,7 @@ const FooterWrapper = styled.footer`
       color: var(--color-grey200);
     }
   }
+  
 
   .footer-col > p {
     margin: 0;
@@ -108,9 +107,7 @@ const Footer = () => {
   const FooterColumn = ({ column }) => {
     return (
       <div className="footer-col">
-        <h3 className="footer-title" key={column.sectionName}>
-          {column.sectionName}
-        </h3>
+        
         <div className="footer-column-items">
           {column.links.map((item, i) => {
             return <FooterItem item={item} key={`footer-column-item-${i}`} />
@@ -123,12 +120,10 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <nav>
-        <div className="footer-col">
-          <h3 className="footer-title">
+        
+        <h3 className="footer-title"></h3>
             {authorName} © {new Date().getFullYear()}
-          </h3>
-
-        </div>
+        
         {footerLinks.map((column, i) => {
           return <FooterColumn column={column} key={`footer-column-${i}`} />
         })}

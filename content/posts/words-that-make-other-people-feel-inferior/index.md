@@ -2,7 +2,7 @@
 title: Words That Make Other People Feel Inferior
 slug: words-that-make-other-people-feel-inferior
 language: en
-generate-card: false
+generate-card: true
 cover: ./negative-words-1.png
 tags: ['self help']
 ---

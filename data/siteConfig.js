@@ -51,20 +51,26 @@ module.exports = {
   },
   footerLinks: [
     {
-      sectionName: 'Explore',
       links: [
-        {
-          label: 'Blog',
-          url: '/',
-        },
+        
         {
           label: 'About',
-          url: '/about-gatsby-starter-morning-dew',
+          url: '/about-us',
         },
         {
-          label: 'Installation',
-          url: '/how-to-install',
+          label: 'Contact',
+          url: '/contact',
         },
+        {
+          label: 'Privacy Policy',
+          url: '/privacy-policy',
+        },
+        {
+          label: 'Disclaimer',
+          url: '/disclaimer-for-learn-more-about-your-self',
+        },
+              
+        
       ],
     },
 
