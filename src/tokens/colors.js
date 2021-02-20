@@ -51,7 +51,7 @@ export const COLORS = {
     dark: colors.grey500,
   },
   primaryAlpha: {
-    light: 'rgba(32, 35, 42, 0.85)',
+    light: '#ff0036',
     dark: 'rgba(32, 35, 42, 0.85)',
   },
   secondary: {

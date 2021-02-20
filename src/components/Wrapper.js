@@ -7,7 +7,7 @@ const Wrapper = styled.main.attrs(props => ({
   position: relative;
   border-radius: 5px;
   width: 80%;
-  max-width: 770px;
+  max-width: 828px;
   word-wrap: break-word;
   background-color: var(--color-wrapperBackground);
   margin: 0px auto 30px auto;

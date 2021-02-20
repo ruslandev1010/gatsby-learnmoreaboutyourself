@@ -28,18 +28,11 @@ class BlogPostTemplate extends React.Component {
           isBlogPost
         />
 
-        <Hero
-          heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
-          title={post.frontmatter.title}
-        />
-
+       
         <Wrapper>
           <Article post={post} />
         </Wrapper>
 
-        <Wrapper as="aside">
-          <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} />
-        </Wrapper>
 
         <PrevNextPost previous={previous} next={next} />
       </Layout>

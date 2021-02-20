@@ -1,7 +1,7 @@
 module.exports = {
-  siteTitle: 'gatsby-starter-morning-dew',
-  siteDescription: 'A Gatsby theme/starter to build lightning-fast websites',
-  authorName: 'Maxence Poutord',
+  siteTitle: 'Learn More About Yourself',
+  siteDescription: 'Life is a Long Learning Journey',
+  authorName: 'Luba Media',
   twitterUsername: '_maxpou',
   authorAvatar: 'avatar.jpeg', // file in content/images
   defaultLang: 'en', // show flag if lang is not default. Leave empty to enable flags in post lists
@@ -15,29 +15,34 @@ module.exports = {
   disqusSiteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
-  siteCover: 'cover-baymax.jpeg', // file in content/images
+  siteCover: 'BELIEVE-IN-YOURSELF.png', // file in content/images
   googleAnalyticsId: 'UA-67868977-2',
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
-  icon: 'content/images/baymax.png',
+  icon: 'content/images/cropped-learn-about-yourself-favicon-32x32.png',
   postsPerPage: 6,
   disqusShortname: 'maxpou',
-  headerTitle: 'gatsby-starter-morning-dew',
-  headerLinksIcon: 'baymax.png', //  (leave empty to disable: '')
+  headerTitle: 'Learn More About Yourself',
+  headerLinksIcon: '', //  (leave empty to disable: '')
   headerLinks: [
     {
-      label: 'Blog',
+      label: 'Happiness',
       url: '/',
     },
     {
-      label: 'About',
-      url: '/about-gatsby-starter-morning-dew',
+      label: 'Success',
+      url: '/',
     },
     {
-      label: 'Installation',
-      url: '/how-to-install',
+      label: 'Motivation',
+      url: '/',
     },
+    {
+      label: 'Self Help',
+      url: '/',
+    },
+    
   ],
   // Footer information (ex: Github, Netlify...)
   websiteHost: {
@@ -62,22 +67,6 @@ module.exports = {
         },
       ],
     },
-    {
-      sectionName: 'Follow the author',
-      links: [
-        {
-          label: 'GitHub',
-          url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
-        },
-        {
-          label: 'Website',
-          url: 'https://www.maxpou.fr',
-        },
-        {
-          label: 'Twitter',
-          url: 'https://twitter.com/_maxpou',
-        },
-      ],
-    },
+
   ],
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Bio from './Bio'
 import Content from './Content'
 
 const ArticleWrapper = styled.article`
@@ -23,17 +22,15 @@ class Article extends React.Component {
     const { post } = this.props
 
     return (
-      <ArticleWrapper>
+     
         <Content
           content={post.body}
           date={post.frontmatter.date}
           tags={post.frontmatter.tags}
           translations={post.frontmatter.translations}
         />
-        <ArticleFooter>
-          <Bio />
-        </ArticleFooter>
-      </ArticleWrapper>
+        
+      
     )
   }
 }

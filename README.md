@@ -139,7 +139,7 @@ module.exports = {
   pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
   siteCover: 'cover-baymax.jpeg', // file in content/images
   googleAnalyticsId: 'UA-67868977-1',
-  background_color: '#ffffff',
+  background_color: '#ff0036',
   theme_color: '#222222',
   display: 'standalone',
   icon: 'content/images/baymax.png',

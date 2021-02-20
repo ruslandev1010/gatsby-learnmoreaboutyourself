@@ -4,9 +4,17 @@ import ContentHeader from './ContentHeader'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
 const ContentBody = styled.div`
-  line-height: 1.6;
+  line-height: 1.88;
+  color: #444;
+  font-family: "Lato";
+
+  & > h1 {
+    font-size: 50px;
+    line-height: 1.2;
+  }
 
   & > h2 {
+    font-size: 30px;
     color: var(--color-h2);
     padding-top: 3rem;
     margin-top: 3rem;
@@ -19,6 +27,7 @@ const ContentBody = styled.div`
 
   & > p {
     margin: 1em 0 0 0;
+    font-size: 20px;
   }
 
   & a {
