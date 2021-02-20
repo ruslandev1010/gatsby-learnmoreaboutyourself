@@ -17,16 +17,11 @@ class BlogList extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO />
-        <Hero title={title} subTitle={description} />
 
         <Wrapper>
           <PostsList posts={posts} />
         </Wrapper>
 
-        <Pagination
-          nbPages={pageContext.nbPages}
-          currentPage={pageContext.currentPage}
-        />
       </Layout>
     )
   }
