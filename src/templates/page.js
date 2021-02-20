@@ -20,10 +20,7 @@ const Page = props => {
         cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
       />
 
-      <Hero
-        heroImg={page.frontmatter.cover && page.frontmatter.cover.publicURL}
-        title={page.frontmatter.title}
-      />
+
 
       <Wrapper>
         <article>

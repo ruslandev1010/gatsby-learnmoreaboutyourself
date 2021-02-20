@@ -28,19 +28,19 @@ module.exports = {
   headerLinks: [
     {
       label: 'Happiness',
-      url: '/',
+      url: '/tags/happiness',
     },
     {
       label: 'Success',
-      url: '/',
+      url: '/tags/success',
     },
     {
       label: 'Motivation',
-      url: '/',
+      url: '/tags/motivation',
     },
     {
       label: 'Self Help',
-      url: '/',
+      url: '/tags/self%20help',
     },
     
   ],
