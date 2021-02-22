@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import Layout from '../components/layout'
 // import Wrapper from '../components/Wrapper'
@@ -7,6 +8,19 @@ import Layout from '../components/layout'
 import PostsList from '../components/PostsList'
 // import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
+
+const Wrapper = styled.div`
+  width: 80%;
+  max-width: 1200px;
+  margin: 0px auto 30px auto;
+  padding: 50px;
+  min-height: 65vh;
+
+  @media (max-width: 780px) {
+    width: 100%;
+    padding: 25px;
+  }
+`
 
 class BlogList extends React.Component {
   render() {
@@ -17,8 +31,10 @@ class BlogList extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO />
-
-        <PostsList posts={posts} />
+        
+        <Wrapper>
+          <PostsList posts={posts} />
+        </Wrapper>
       </Layout>
     )
   }

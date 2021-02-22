@@ -1,23 +1,12 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-// import PostsListItem from './PostsListItem'
+
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
 import TagList from './TagList'
 import Flag from './Flag'
 import { ReadingTime, Bull } from './Commons'
-
-const Wrapper = styled.div`
-  margin: 0px auto 30px auto;
-  padding: 50px;
-  min-height: 65vh;
-
-  @media (max-width: 780px) {
-    width: 100%;
-    padding: 25px;
-  }
-`
 
 const CardsContainer = styled.aside`
   display: flex;
@@ -75,7 +64,7 @@ const PostsList = ({ posts }) => {
   const { fluid } = useSiteImages(siteCover)
 
   return (
-    <Wrapper>
+    <Fragment>
       <CardsContainer>
         {posts.map((article, i) => {
           const { excerpt, timeToRead } = article.node
@@ -117,7 +106,7 @@ const PostsList = ({ posts }) => {
           )
         })}
       </CardsContainer>
-    </Wrapper>
+    </Fragment>
   )
 }
 export default PostsList
