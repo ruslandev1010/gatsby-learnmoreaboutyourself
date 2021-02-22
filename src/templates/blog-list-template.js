@@ -55,6 +55,17 @@ export const pageQuery = graphql`
             tags
             language
             slug
+            cover {
+              publicURL
+            }
+            imageShare {
+              publicURL
+            }
+            translations {
+              language
+              link
+              hreflang
+            }
           }
         }
       }
