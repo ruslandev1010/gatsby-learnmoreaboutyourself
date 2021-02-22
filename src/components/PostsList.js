@@ -8,8 +8,20 @@ import TagList from './TagList'
 import Flag from './Flag'
 import { ReadingTime, Bull } from './Commons'
 
+const Wrapper = styled.div`
+  margin: 0px auto 30px auto;
+  padding: 50px;
+  min-height: 65vh;
+
+  @media (max-width: 780px) {
+    width: 100%;
+    padding: 25px;
+  }
+`
+
 const CardsContainer = styled.aside`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 
   @media (max-width: 780px) {
@@ -20,10 +32,10 @@ const CardsContainer = styled.aside`
 
 const Card = styled.article`
   cursor: pointer;
-  flex: 1 1 300px;
+
   background-color: var(--color-secondaryContentBackground);
   box-shadow: 0 0 0 0, 0 6px 12px rgba(0, 0, 0, 0.1);
-  margin: 20px 20px;
+  margin: 10px 10px;
   border-radius: 5px;
 
   &:hover {
@@ -31,7 +43,7 @@ const Card = styled.article`
     transition: all 0.3s ease;
     transform: translate3D(0, -1px, 0);
   }
-  @media (min-width: 992px) {
+  @media (min-width: 780px) {
     max-width: 320px;
   }
 `
@@ -63,7 +75,7 @@ const PostsList = ({ posts }) => {
   const { fluid } = useSiteImages(siteCover)
 
   return (
-    <Fragment>
+    <Wrapper>
       <CardsContainer>
         {posts.map((article, i) => {
           const { excerpt, timeToRead } = article.node
@@ -105,7 +117,7 @@ const PostsList = ({ posts }) => {
           )
         })}
       </CardsContainer>
-    </Fragment>
+    </Wrapper>
   )
 }
 export default PostsList

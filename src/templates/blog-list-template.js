@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import Wrapper from '../components/Wrapper'
-import Hero from '../components/Hero'
+// import Wrapper from '../components/Wrapper'
+// import Hero from '../components/Hero'
 import PostsList from '../components/PostsList'
-import Pagination from '../components/Pagination'
+// import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 
 class BlogList extends React.Component {
@@ -18,10 +18,7 @@ class BlogList extends React.Component {
       <Layout location={this.props.location}>
         <SEO />
 
-        <Wrapper>
-          <PostsList posts={posts} />
-        </Wrapper>
-
+        <PostsList posts={posts} />
       </Layout>
     )
   }
