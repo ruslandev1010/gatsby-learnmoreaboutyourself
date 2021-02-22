@@ -4,12 +4,20 @@ import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import PostsList from '../components/PostsList'
-import Wrapper from '../components/Wrapper'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 
-const PageTitle = styled.h1`
-  padding-bottom: 10px;
+const Wrapper = styled.div`
+  width: 80%;
+  max-width: 1200px;
+  margin: 0px auto 30px auto;
+  padding: 50px;
+  min-height: 65vh;
+
+  @media (max-width: 780px) {
+    width: 100%;
+    padding: 25px;
+  }
 `
 
 class Tags extends React.Component {
@@ -23,7 +31,6 @@ class Tags extends React.Component {
         <Hero title={pageTitle} />
 
         <Wrapper>
-          <PageTitle>Posts tagged as {this.props.pageContext.tag}</PageTitle>
           <PostsList posts={posts} />
         </Wrapper>
       </Layout>
