@@ -1,5 +1,5 @@
 ---
-title: [3 Tips] Find Your True Potential
+title: 3 Tips Find Your True Potential
 slug: 3-tips-find-your-true-potential
 language: en
 generate-card: true
