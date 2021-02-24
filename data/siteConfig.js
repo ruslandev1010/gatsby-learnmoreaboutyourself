@@ -11,7 +11,7 @@ module.exports = {
   As a digital nomad, he is living where the WiFi and sun are 😎 <br>
   Do you want to know more? <a href="https://www.maxpou.fr/about" rel="noopener" target="_blank">Visit my website!</a>
   `,
-  siteUrl: 'https://maxpou.github.io/',
+  siteUrl: 'https://www.learnmoreaboutyourself.com/',
   disqusSiteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
