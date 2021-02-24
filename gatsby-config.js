@@ -98,12 +98,6 @@ module.exports = {
         modules: ['gatsby-starter-morning-dew'],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        publisherId: `ca-pub-6043961736091377`
-      },
-    },
     `gatsby-plugin-catch-links`,
   ],
 }
