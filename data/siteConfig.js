@@ -20,7 +20,7 @@ module.exports = {
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
-  icon: 'content/images/cropped-learn-about-yourself-favicon-32x32.png',
+  icon: 'content/images/LearnMoreAboutYourSelf_favicon.png',
   postsPerPage: 100,
   disqusShortname: 'maxpou',
   headerTitle: 'Learn More About Yourself',
