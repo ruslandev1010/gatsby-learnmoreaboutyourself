@@ -11,7 +11,7 @@ tags: ['self help']
 
 Hi and welcome back to [learn more about yourself](https://learnmoreaboutyourself.com/)! Always remember overcoming your mistakes is one of the most effective practical self-improvement tips.
 
-![](./Self-improvement-1.png)
+![](./Self-Improvement-1.png)
 
 ## Always Read Books
 
