@@ -1,5 +1,5 @@
 ---
-title: 'Guru' Who Teaches The Weak Player The Art Of Living Life
+title: Guru Who Teaches The Weak Player The Art Of Living Life
 slug: guru-who-teaches-the-weak-player-the-art-of-living-life
 language: en
 generate-card: false
