@@ -4,7 +4,7 @@ slug: big-signs-youve-outgrown-your-life
 language: en
 generate-card: true
 cover: ./outgrown-your-life.png
-tags: ['success', 'work']
+tags: ['success']
 ---
 
 # Big Signs You’ve Outgrown Your Life
