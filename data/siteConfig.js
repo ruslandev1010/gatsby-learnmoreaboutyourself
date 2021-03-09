@@ -41,7 +41,18 @@ module.exports = {
       label: 'Self Help',
       url: '/tags/self%20help',
     },
-    
+    {
+      label: 'Communication',
+      url: '/tags/communication',
+    },
+    {
+      label: 'Fitness',
+      url: '/tags/fitness',
+    },
+    {
+      label: 'Work',
+      url: '/tags/work',
+    },
   ],
   // Footer information (ex: Github, Netlify...)
   websiteHost: {
@@ -51,7 +62,7 @@ module.exports = {
   footerLinks: [
     {
       links: [
-        
+
         {
           label: 'About',
           url: '/about-us',
@@ -68,8 +79,8 @@ module.exports = {
           label: 'Disclaimer',
           url: '/disclaimer-for-learn-more-about-your-self',
         },
-              
-        
+
+
       ],
     },
 

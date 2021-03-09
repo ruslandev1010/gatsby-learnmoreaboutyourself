@@ -9,7 +9,7 @@ const Wrapper = styled.main.attrs(props => ({
   width: 80%;
   max-width: 828px;
   word-wrap: break-word;
-  background-color: var(--color-wrapperBackground);
+  background-color: var(--color-primaryBetaBack);
   margin: 0px auto 30px auto;
   top: 30px;
   padding: 50px;

@@ -7,19 +7,18 @@ import useSiteMetadata from '../hooks/use-site-config'
 import { media } from '../tokens'
 import useSiteImages from '../hooks/use-site-images'
 import DarkToggle from './DarkToggle'
+import SearchIcon from './SearchIcon'
 
 const HeaderWrapper = styled.header`
   top: 0;
-  left: 0;
-  margin: 0 auto;
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: var(--color-primaryAlpha);
+  background-color: var(--color-primaryBetaBack);
   font-weight: 700;
 
-  @media ${media.medium} {
-    position: fixed;
+  @media (min-width: 780px) {
+    position: sticky;
   }
 `
 
@@ -27,50 +26,84 @@ const HeaderNav = styled.nav`
   font-weight: 700;
   margin-left: auto;
   margin-right: auto;
-  height: 60px;
+  height: 120px;
   display: flex;
-  flex-direction: row;
-  max-width: 770px;
+  flex-direction: column;
   z-index: 1000;
-  justify-content: space-between;
+  justify-content: center;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  padding: 0px 10px;
+
 `
 
 const HeaderLinksContainer = styled.div`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 14px;
+  text-transform: lowercase;
   display: none;
   -webkit-box-align: center;
   align-items: center;
-  @media ${media.medium} {
+  justify-content: center;
+
+  background: var(--color-primaryBetaBack);
+  box-shadow: 0px 4px 4px #E7E7E7;
+  @media (min-width: 780px) {
     display: flex;
   }
 `
+const HeaderLinkTitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 58px;
+  font-family: Copperplate Gothic Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 34px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #E8E8E8;
+  box-sizing: border-box;
+`
 
 const HeaderLink = styled(Link)`
-  position: relative;
-  display: flex;
   align-items: center;
-  color: var(--color-white);
   border: 0;
   margin: 0;
-  padding: 8px 10px;
+  padding: 15px 10px;
+  color: var(--color-primaryBeta);
 
-  min-width: 42px;
+  font-family: Copperplate Gothic Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  min-width: 58px;
   z-index: 10;
   & + & {
     margin-left: 0.7rem;
   }
+
 `
 
 const HeaderLinkTitle = styled(HeaderLink)`
-  padding-left: 0;
+  color: var(--color-primaryBeta);
 `
 
 const HeaderLinkTitleContent = styled.span`
   display: block;
   padding-left: 0;
+  font-family: Copperplate Gothic Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 34px;
+  text-transform: capitalize;
+  color: #CD1D42;
 `
 
 const HeaderImage = styled.img`
@@ -87,8 +120,9 @@ const MobilePanel = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--color-primary);
-  @media ${media.medium} {
+  background-color: var(--color-primaryBetaBack);
+  margin-bottom: 300px;
+  @media (min-width: 780px) {
     display: none;
   }
 `
@@ -126,6 +160,24 @@ const MobileNav = styled.nav`
   }
 `
 
+const HeaderLinksMainSubContainer = styled.div`
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+`
+const HeaderLinksSubContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 66.66%;
+`
+const HeaderLinksSubMargin = styled.div`
+  justify-content: flex-end;
+  display: flex;
+  width: 16.67%;
+`
+
 const HeaderLinks = ({ headerLinks }) => {
   return headerLinks.map((headerLink, i) => (
     <HeaderLink
@@ -151,7 +203,7 @@ const BurgerButton = styled.button`
   outline: none;
   -webkit-tap-highlight-color: transparent;
 
-  @media ${media.medium} {
+  @media (min-width: 780px) {
     display: none;
   }
 `
@@ -160,20 +212,20 @@ const BurgerContent = styled.div`
   width: 24px;
   top: 30px;
   height: 2px;
-  background: var(--color-white);
+  background: var(--color-primaryBeta);
   position: absolute;
   left: 0;
   ${props =>
     props.isToggledOn
       ? 'background: transparent'
-      : `background: var(--color-white)`};
+      : `background: var(--color-primaryBeta)`};
   transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
   ::before {
     content: '';
     top: -8px;
     width: 24px;
     height: 2px;
-    background: var(--color-white);
+    background: var(--color-primaryBeta);
     position: absolute;
     left: 0;
     ${props =>
@@ -198,6 +250,10 @@ const BurgerContent = styled.div`
   }
 `
 
+const IconsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
 const MobileHeader = ({ headerLinks }) => {
   const [isToggledOn, setToggle] = useState(false)
   const toggle = () => setToggle(!isToggledOn)
@@ -214,7 +270,10 @@ const MobileHeader = ({ headerLinks }) => {
         <MobilePanel>
           <MobileNav>
             <HeaderLinks headerLinks={headerLinks} />
-            <DarkToggle isExpanded={true} />
+            <IconsContainer>
+              <DarkToggle isExpanded={true} />
+              <SearchIcon />
+            </IconsContainer>
           </MobileNav>
         </MobilePanel>
       )}
@@ -239,13 +298,24 @@ const Header = () => {
         <SkipMainContent href="#main-content">
           Skip to main content
         </SkipMainContent>
-        <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
-          {iconSrc && <HeaderImage src={iconSrc} alt={siteTitle} />}
-          <HeaderLinkTitleContent>{headerTitle}</HeaderLinkTitleContent>
-        </HeaderLinkTitle>
+        <HeaderLinkTitleContainer>
+          <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
+            {iconSrc && <HeaderImage src={iconSrc} alt={siteTitle} />}
+            <HeaderLinkTitleContent>{headerTitle}</HeaderLinkTitleContent>
+          </HeaderLinkTitle>
+        </HeaderLinkTitleContainer>
         <HeaderLinksContainer>
-          <HeaderLinks headerLinks={headerLinks} />
-          <DarkToggle />
+          <HeaderLinksMainSubContainer>
+            <HeaderLinksSubMargin>
+            </HeaderLinksSubMargin>
+            <HeaderLinksSubContainer>
+              <HeaderLinks headerLinks={headerLinks} />
+            </HeaderLinksSubContainer>
+            <HeaderLinksSubMargin>
+              <DarkToggle />
+              <SearchIcon />
+            </HeaderLinksSubMargin>
+          </HeaderLinksMainSubContainer>
         </HeaderLinksContainer>
         <MobileHeader headerLinks={headerLinks} />
       </HeaderNav>

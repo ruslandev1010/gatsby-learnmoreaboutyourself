@@ -2,23 +2,37 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentHeader from './ContentHeader'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
-
 const ContentBody = styled.div`
   line-height: 1.88;
-  color: #444;
+  color: var(--color-primaryBeta);
   font-family: "Lato";
 
+  font-family: Savoy;
+  font-style: normal;
+  font-weight: normal;
+
   & > h1 {
-    font-size: 50px;
-    line-height: 1.2;
+    font-size: 49px;
+    line-height: 57px;
+    @media (max-width: 780px) {
+      font-size: 31px;
+      line-height: 36px;
+      text-align: center;
+    }
   }
 
   & > h2 {
-    font-size: 30px;
-    color: var(--color-h2);
     padding-top: 3rem;
     margin-top: 3rem;
-    border-top: 1px solid #ececec;
+    font-family: Savoy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 31px;
+    line-height: 36px;
+    color: var(--color-primaryBeta);
+    @media (max-width: 780px) {
+      text-align: center;
+    }
   }
 
   & > h3 {
@@ -28,6 +42,9 @@ const ContentBody = styled.div`
   & > p {
     margin: 1em 0 0 0;
     font-size: 20px;
+    @media (max-width: 780px) {
+      font-size: 14px;
+    }
   }
 
   & a {

@@ -8,11 +8,9 @@ import { GlobalStyle } from './Commons'
 import { media } from '../tokens'
 
 const SiteContent = styled.div`
-  margin: 0 0;
-
-  @media ${media.medium} {
-    margin: 60px 0;
-  }
+  max-width: 1280px;
+  border: 1px solid red;
+  margin: 0 auto 0;
 `
 
 class Template extends React.Component {
