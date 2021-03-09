@@ -18,6 +18,7 @@ const colors = {
   darkBlue: '#022a4b',
   beige: '#fff9d9',
   red: '#ff0000',
+  black: '#000000',
 }
 
 export const COLORS = {
@@ -31,8 +32,8 @@ export const COLORS = {
     dark: '#c6d8e0',
   },
   siteBackground: {
-    light: '#f4f8fb',
-    dark: colors.grey500,
+    light: colors.white,
+    dark: colors.black,
   },
   wrapperBackground: {
     light: colors.white,
@@ -51,8 +52,16 @@ export const COLORS = {
     dark: colors.grey500,
   },
   primaryAlpha: {
-    light: '#ff0036',
-    dark: 'rgba(32, 35, 42, 0.85)',
+    light: '#e5e5e5',
+    dark: colors.black,
+  },
+  primaryBeta: {
+    light: colors.black,
+    dark: colors.white,
+  },
+  primaryBetaBack: {
+    light: colors.white,
+    dark: colors.black,
   },
   secondary: {
     light: colors.yellow,
@@ -62,6 +71,18 @@ export const COLORS = {
     light: colors.grey500,
     dark: colors.yellow,
   },
+  cardFooter: {
+    light: '#333333',
+    dark: colors.white,
+  },
+  secondaryBack: {
+    light: '#F9F9F9',
+    dark: '#171717',
+  },
+  footerBack: {
+    light: '#585858',
+    dark: '#171717',
+  }
 }
 
 export const COLOR_MODE_KEY = 'color-mode'

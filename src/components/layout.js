@@ -9,7 +9,6 @@ import { media } from '../tokens'
 
 const SiteContent = styled.div`
   max-width: 1280px;
-  border: 1px solid red;
   margin: 0 auto 0;
 `
 
