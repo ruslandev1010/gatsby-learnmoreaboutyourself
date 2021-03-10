@@ -33,6 +33,7 @@ const CardCover = styled.div`
     background: #c5d2d9 no-repeat 50%;
     background-size: cover;
     object-fit: cover;
+    aspect-ratio: 1140/602;
   }
 `
 
@@ -86,7 +87,8 @@ const ReadButton = styled.button`
     outline: none;
   }
   @media (max-width: 780px) {
-    width: 40%;
+    width: 47%;
+    font-size: 13px;
   }
 `
 

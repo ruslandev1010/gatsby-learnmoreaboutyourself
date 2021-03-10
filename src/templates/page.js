@@ -10,7 +10,7 @@ import Disqus from '../components/Disqus'
 
 const Page = props => {
   const page = props.data.page
-
+  console.log(page.body)
   return (
     <Layout location={props.location}>
       <SEO

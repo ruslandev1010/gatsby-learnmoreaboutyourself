@@ -10,6 +10,7 @@ import { media } from '../tokens'
 const SiteContent = styled.div`
   max-width: 1280px;
   margin: 0 auto 0;
+  border: 1px solid red;
 `
 
 class Template extends React.Component {

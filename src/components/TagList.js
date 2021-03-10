@@ -8,6 +8,7 @@ const ListContainer = styled.div`
   @media(max-width: 780px) {
     justify-content: center;
     display: flex;
+    margin-top: 8px;
   }
 `
 

@@ -31,18 +31,19 @@ const Card = styled.article`
 const CardCover = styled.div`
   img {
     margin-right: 14px;
-    width: 50%;
+    width: 100%;
     height: auto;
     background: #c5d2d9 no-repeat 50%;
     background-size: cover;
     object-fit: cover;
+    aspect-ratio: 142.5/142;
   }
 `
 
 const CardContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 5px 0 0 0;
+  padding: 5px 0 0 18px;
   header {
     padding: 0 0 5px 0;
   }
@@ -76,6 +77,7 @@ const PostTopic = styled.div`
   @media (max-width: 780px) {
     font-size: 20px;
     line-height: 22px;
+    padding: 15px 0 15px;
   }
 `
 
@@ -111,10 +113,10 @@ const ReadPostsList = ({ posts }) => {
                 <Card key={`prev-next-${i}`} style={{flex: "33.3%"}}>
                   <Link to={`/${slug}`} aria-label={`View ${title} article`}>
                     <SubContainer>
-                      <CardCover>
+                      <CardCover className="col-6">
                         <img src={`${heroImg}`} />
                       </CardCover>
-                      <CardContent>
+                      <CardContent className="col-6">
                         <header>
                           {Array.isArray(tags) && (
                             <ReadTagList tags={tags} noLink={true} />

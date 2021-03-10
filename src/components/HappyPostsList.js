@@ -31,6 +31,7 @@ const CardCover = styled.div`
     height: auto;
     background: #c5d2d9 no-repeat 50%;
     background-size: cover;
+    aspect-ratio: 720/623;
   }
 `
 
@@ -63,6 +64,7 @@ const PostTopic = styled.div`
   @media (max-width: 780px) {
     font-size: 20px;
     line-height: 22px;
+    padding: 15px 0 15px;
   }
 `
 

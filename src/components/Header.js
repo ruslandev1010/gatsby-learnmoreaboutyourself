@@ -104,6 +104,10 @@ const HeaderLinkTitleContent = styled.span`
   line-height: 34px;
   text-transform: uppercase;
   color: #CD1D42;
+  @media (max-width: 780px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 `
 
 const HeaderImage = styled.img`
