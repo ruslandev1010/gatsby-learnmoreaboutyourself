@@ -24,22 +24,19 @@ const Card = styled.article`
   cursor: pointer;
   background-color: var(--color-secondaryBack);
   padding: 30px 63px;
-  img {
-    height: 142px;
-    @media (max-width: 780px) {
-      height: 300px;
-    }
-  }
   @media (min-width: 780px) {
   }
 `
 
-const CardCover = styled.img`
-  margin-right: 14px;
-  width: 50%;
-  height: auto;
-  background: #c5d2d9 no-repeat 50%;
-  background-size: cover;
+const CardCover = styled.div`
+  img {
+    margin-right: 14px;
+    width: 50%;
+    height: auto;
+    background: #c5d2d9 no-repeat 50%;
+    background-size: cover;
+    object-fit: cover;
+  }
 `
 
 const CardContent = styled.div`
@@ -114,7 +111,9 @@ const ReadPostsList = ({ posts }) => {
                 <Card key={`prev-next-${i}`} style={{flex: "33.3%"}}>
                   <Link to={`/${slug}`} aria-label={`View ${title} article`}>
                     <SubContainer>
-                      <CardCover src={ `${heroImg}` }/>
+                      <CardCover>
+                        <img src={`${heroImg}`} />
+                      </CardCover>
                       <CardContent>
                         <header>
                           {Array.isArray(tags) && (

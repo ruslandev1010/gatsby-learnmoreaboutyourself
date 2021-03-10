@@ -102,7 +102,7 @@ const HeaderLinkTitleContent = styled.span`
   font-weight: bold;
   font-size: 31px;
   line-height: 34px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #CD1D42;
 `
 

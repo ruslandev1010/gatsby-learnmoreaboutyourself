@@ -22,9 +22,7 @@ const Card = styled.article`
   cursor: pointer;
   background-color: var(--color-primaryBetaBack);
   padding: 30px 63px;
-  img {
-    height: 300px;
-  }
+
   @media (min-width: 780px) {
   }
 `
@@ -34,18 +32,19 @@ const MainCard = styled.article`
   background-color: var(--color-primaryBetaBack);
   padding: 30px 63px;
   width: 66.66%;
-  img {
-    height: 600px;
-  }
+
   @media (max-width: 780px) {
     width: 100%;
   }
 `
-const CardCover = styled.img`
-  width: 100%;
-  height: auto;
-  background: #c5d2d9 no-repeat 50%;
-  background-size: cover;
+const CardCover = styled.div`
+  img {
+    width: 100%;
+    height: auto;
+    background: #c5d2d9 no-repeat 50%;
+    background-size: cover;
+    object-fit: cover;
+  }
 `
 
 const CardContent = styled.div`
@@ -128,7 +127,9 @@ const LatestPostsList = ({ posts }) => {
         <SubMainContainer>
           <MainCard>
             <Link to={`/${posts[1].node.frontmatter.slug}`} aria-label={`View ${posts[1].node.frontmatter.title} article`}>
-              <CardCover src={`${(posts[1].node.frontmatter.cover && posts[1].node.frontmatter.cover.publicURL) || fluid.src}`}/>
+              <CardCover>
+                <img src={`${(posts[1].node.frontmatter.cover && posts[1].node.frontmatter.cover.publicURL) || fluid.src}`} />
+              </CardCover>
               <CardContent>
                 <header>
                   {Array.isArray(posts[1].node.frontmatter.tags) && (
@@ -148,7 +149,9 @@ const LatestPostsList = ({ posts }) => {
           <SubContainer>
             <Card>
               <Link to={`/${posts[2].node.frontmatter.slug}`} aria-label={`View ${posts[2].node.frontmatter.title} article`}>
-                <CardCover src={`${(posts[2].node.frontmatter.cover && posts[2].node.frontmatter.cover.publicURL) || fluid.src}`} />
+                <CardCover>
+                  <img src={`${(posts[2].node.frontmatter.cover && posts[2].node.frontmatter.cover.publicURL) || fluid.src}`} />
+                </CardCover>
                 <CardContent>
                   <header>
                     {Array.isArray(posts[2].node.frontmatter.tags) && (
@@ -167,7 +170,9 @@ const LatestPostsList = ({ posts }) => {
             </Card>
             <Card>
               <Link to={`/${posts[3].node.frontmatter.slug}`} aria-label={`View ${posts[3].node.frontmatter.title} article`}>
-                <CardCover src={`${(posts[3].node.frontmatter.cover && posts[3].node.frontmatter.cover.publicURL) || fluid.src}`} />
+                <CardCover>
+                  <img src={`${(posts[3].node.frontmatter.cover && posts[3].node.frontmatter.cover.publicURL) || fluid.src}`} />
+                </CardCover>
                 <CardContent>
                   <header>
                     {Array.isArray(posts[3].node.frontmatter.tags) && (
@@ -201,7 +206,9 @@ const LatestPostsList = ({ posts }) => {
               return (
                 <Card key={`prev-next-${i}`} style={{flex: "33.3%"}}>
                   <Link to={`/${slug}`} aria-label={`View ${title} article`}>
-                    <CardCover src={ `${heroImg}` }/>
+                    <CardCover>
+                      <img src={ `${heroImg}` }/>
+                    </CardCover>
                     <CardContent>
                       <header>
                         {Array.isArray(tags) && (

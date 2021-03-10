@@ -26,11 +26,14 @@ const MainCard = styled.article`
   @media (min-width: 780px) {
   }
 `
-const CardCover = styled.img`
-  width: 100%;
-  height: auto;
-  background: #c5d2d9 no-repeat 50%;
-  background-size: cover;
+const CardCover = styled.div`
+  img {
+    width: 100%;
+    height: auto;
+    background: #c5d2d9 no-repeat 50%;
+    background-size: cover;
+    object-fit: cover;
+  }
 `
 
 const CardContent = styled.div`
@@ -97,12 +100,14 @@ const TopPostsList = ({ posts }) => {
       <Fragment>
         <MainCard style={{width: "100%"}}>
           <Link to={`/${posts[0].node.frontmatter.slug}`} aria-label={`View ${posts[0].node.frontmatter.title} article`}>
-            <CardCover src={`${(posts[0].node.frontmatter.cover && posts[0].node.frontmatter.cover.publicURL) || fluid.src}`}/>
-            <header>
-              {Array.isArray(posts[0].node.frontmatter.tags) && (
-                <TagList tags={posts[0].node.frontmatter.tags} noLink={true} />
-              )}
-            </header>
+            <CardCover>
+              <img src={`${(posts[0].node.frontmatter.cover && posts[0].node.frontmatter.cover.publicURL) || fluid.src}`} />
+              <header>
+                {Array.isArray(posts[0].node.frontmatter.tags) && (
+                  <TagList tags={posts[0].node.frontmatter.tags} noLink={true} />
+                )}
+              </header>
+            </CardCover>
             <CardContent>
               <footer>
                 <h2>
