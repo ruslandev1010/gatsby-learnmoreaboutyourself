@@ -10,7 +10,7 @@ import Disqus from '../components/Disqus'
 
 const Page = props => {
   const page = props.data.page
-  console.log(page.body)
+ // console.log(page)
   return (
     <Layout location={props.location}>
       <SEO
@@ -19,9 +19,6 @@ const Page = props => {
         path={page.frontmatter.slug}
         cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
       />
-
-
-
       <Wrapper>
         <article>
           <Content content={page.body} date={page.frontmatter.date} />

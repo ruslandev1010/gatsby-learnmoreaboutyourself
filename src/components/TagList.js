@@ -48,7 +48,6 @@ class TagList extends React.Component {
     return (
       <ListContainer>
         {tags.map((tag, i) => {
-          console.log(noLink)
           return (
             <Fragment key={`tag-list-${i}`}>
               {!noLink && (
