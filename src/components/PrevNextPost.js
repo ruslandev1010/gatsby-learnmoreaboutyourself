@@ -25,16 +25,9 @@ const PreviewContainer = styled.aside`
 const Preview = styled.article`
   cursor: pointer;
   flex: 1 1 300px;
-  background-color: var(--color-secondaryContentBackground);
+  background-color: var(--color-primaryBetaBack);
   box-shadow: 0 0 0 0, 0 6px 12px rgba(0, 0, 0, 0.1);
   margin: 20px 20px;
-  border-radius: 5px;
-
-  &:hover {
-    box-shadow: 0 0 0 0, 0 6px 12px var(--color-grey300);
-    transition: all 0.3s ease;
-    transform: translate3D(0, -1px, 0);
-  }
 
   @media (min-width: 780px) {
     &:first-child {
@@ -46,25 +39,32 @@ const Preview = styled.article`
   }
 `
 
-const PreviewCover = styled.div`
+const PreviewCover = styled.img`
   width: auto;
-  height: 200px;
+  height: 300px;
   background: #c5d2d9 no-repeat 50%;
   background-size: cover;
-  border-radius: 5px 5px 0 0;
 `
 
 const PreviewContent = styled.div`
-  padding: 20px;
+  padding: 5px 0 0 0;
 
   header {
-    padding: 0 0 10px 0;
+    padding: 0 0 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   section {
     padding-bottom: 10px;
   }
-  footer {
-    font-size: 0.8em;
+  footer h2 {
+    font-family: Savoy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--color-primaryBeta);
   }
 `
 
@@ -92,26 +92,22 @@ const PrevNextPost = props => {
             <Preview key={`prev-next-${i}`}>
               <Link to={`/${slug}`} aria-label={`View ${title} article`}>
                 <PreviewCover
-                  style={{ backgroundImage: `url("${heroImg}")` }}
+                  src= {`${heroImg}`}
                 />
                 <PreviewContent>
                   <header>
+                    {Array.isArray(tags) && (
+                      <>
+                        <TagList tags={tags} noLink={true} />
+                      </>
+                    )}
+                    <ReadingTime min={timeToRead} />
+                  </header>
+                  <footer>
                     <h2>
                       {defaultLang !== language && <Flag language={language} />}
                       {title}
                     </h2>
-                  </header>
-                  <section>
-                    <p>{excerpt}</p>
-                  </section>
-                  <footer>
-                    <ReadingTime min={timeToRead} />
-                    {Array.isArray(tags) && (
-                      <>
-                        <Bull />
-                        <TagList tags={tags} noLink={true} />
-                      </>
-                    )}
                   </footer>
                 </PreviewContent>
               </Link>

@@ -5,15 +5,14 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 // import Wrapper from '../components/Wrapper'
 // import Hero from '../components/Hero'
-import PostsList from '../components/PostsList'
+import LatestPostsList from '../components/LatestPostsList'
+import ReadPostsList from '../components/ReadPostsList'
+import HappyPostsList from '../components/HappyPostsList'
+import TopPostsList from '../components/TopPostsList'
 // import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 
 const Wrapper = styled.div`
-  width: 80%;
-  max-width: 1200px;
-  margin: 0px auto 30px auto;
-  padding: 50px;
   min-height: 65vh;
 
   @media (max-width: 780px) {
@@ -21,6 +20,7 @@ const Wrapper = styled.div`
     padding: 25px;
   }
 `
+
 
 class BlogList extends React.Component {
   render() {
@@ -33,7 +33,10 @@ class BlogList extends React.Component {
         <SEO />
         
         <Wrapper>
-          <PostsList posts={posts} />
+          <TopPostsList posts={posts} />
+          <LatestPostsList posts={posts} />
+          <ReadPostsList posts={posts} />
+          <HappyPostsList posts={posts} />
         </Wrapper>
       </Layout>
     )

@@ -28,12 +28,10 @@ class BlogPostTemplate extends React.Component {
           isBlogPost
         />
 
-       
+
         <Wrapper>
           <Article post={post} />
         </Wrapper>
-
-
         <PrevNextPost previous={previous} next={next} />
       </Layout>
     )

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ThemeContext } from '../ThemeContext'
-import MoonLight from './icons/moon-light.svg'
-import MoonDark from './icons/moon-dark.svg'
+import LightIcon from './icons/search-light.svg'
+import DarkIcon from './icons/search-dark.svg'
 
 const DarkModeButton = styled.button`
   background: transparent;
@@ -18,29 +18,28 @@ const DarkModeButton = styled.button`
   }
 `
 
-const DarkToggle = ({ isExpanded = false }) => {
+
+const SearchIcon = ({ isExpanded = false }) => {
   const { colorMode, setColorMode } = React.useContext(ThemeContext)
 
   if (!colorMode) {
     return null
   }
 
-  const toggleMode = () =>
-    colorMode === 'light' ? setColorMode('dark') : setColorMode('light')
   const oppositeColor = colorMode === 'light' ? 'dark' : 'light'
 
   return (
     <DarkModeButton
-      onClick={toggleMode}
       aria-label={`Activate ${oppositeColor} mode`}
     >
       {colorMode === 'dark' ? (
-        <img src={MoonDark} alt="sun logo" />
+        <img src={DarkIcon} alt="search icon" />
       ) : (
-        <img src={MoonLight} alt="moon Logo" />
+        <img src={LightIcon} alt="search icon" />
       )}
+      {isExpanded && `Toggle ${oppositeColor} mode`}
     </DarkModeButton>
   )
 }
 
-export default DarkToggle
+export default SearchIcon

@@ -5,17 +5,15 @@ import styled from 'styled-components'
 const ListContainer = styled.div`
   display: inline;
   color: var(--color-textSecondary);
-  @media(max-width: 780px) {
-    justify-content: center;
-    display: flex;
-    margin-top: 8px;
-  }
 `
 
 const TagListItemLink = styled(Link)`
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
   text-transform: uppercase;
-  font-size: 13px;
-  line-height: 135%;
   &:not(:first-child) {
     margin-left: 0.3rem;
   }
@@ -29,22 +27,20 @@ const TagListItemLink = styled(Link)`
 `
 
 const TagListItem = styled.span`
-  font-family: Savoy;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 13px;
-  line-height: 135%;
+  font-size: 12px;
+  line-height: 15px;
   text-transform: uppercase;
-  color: #CD1D42;
   &:not(:first-child) {
     margin-left: 0.3rem;
   }
 `
 
-class TagList extends React.Component {
+class ReadTagList extends React.Component {
   render() {
     const { tags, noLink } = this.props
-
     return (
       <ListContainer>
         {tags.map((tag, i) => {
@@ -63,4 +59,4 @@ class TagList extends React.Component {
   }
 }
 
-export default TagList
+export default ReadTagList
